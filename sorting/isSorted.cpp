@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//non recursive
+// non recursive
 void isSorted(int arr[], int n)
 {
     bool flag = 0;
@@ -28,20 +28,22 @@ void isSorted(int arr[], int n)
     }
 }
 
-//recursive
-bool isSortedRec(int arr[],int n){
-    
+// recursive
+bool isSortedRec(int arr[], int n)
+{
 
-    if(n==0 || n==1)
+    if (n == 0 || n == 1)
         return true;
 
-    if(arr[0]>arr[1]){
+    if (arr[0] > arr[1])
+    {
         return false;
     }
-    else{
-       bool remainingPart=isSortedRec(arr+1,n-1);
-       cout<<remainingPart;
-       return remainingPart;
+    else
+    {
+        bool remainingPart = isSortedRec(arr + 1, n - 1);
+        cout << remainingPart;
+        return remainingPart;
     }
 }
 
@@ -51,16 +53,18 @@ int main()
     int n = 5;
     int arr[5] = {2, 5, 4, 4, 5};
 
-   // isSorted(arr, n);
+    // isSorted(arr, n);
 
-   bool ans=isSortedRec(arr,n);
+    bool ans = isSortedRec(arr, n);
 
-   if(ans){
-    cout<<"Sorted";
-   }
-   else{
-    cout<<"Not sorted";
-   }
+    if (ans)
+    {
+        cout << "Sorted";
+    }
+    else
+    {
+        cout << "Not sorted";
+    }
 
     return 0;
 }

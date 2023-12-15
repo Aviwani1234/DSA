@@ -48,9 +48,9 @@ void quikSort(int arr[], int s, int e)
 
     int p = partition(arr, s, e);
 
-    quikSort(arr, s, p - 1);   //left
+    quikSort(arr, s, p - 1); // left
 
-    quikSort(arr, p + 1, e);   //rigth
+    quikSort(arr, p + 1, e); // rigth
 }
 
 int main()
