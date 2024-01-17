@@ -1,29 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 void solve(int n)
 {
     vector<int> rem;
-    while(n)
+    while (n)
     {
-        int digit = n%2;
+        int digit = n % 2;
         rem.push_back(digit);
-        n = n/2;
+        n = n / 2;
     }
 
     reverse(rem.begin(), rem.end());
 
-    for(int i=0;i<rem.size();i++)
+    for (int i = 0; i < rem.size(); i++)
     {
-        cout<<rem[i];
+        cout << rem[i];
     }
 }
 
-int main(){
+int main()
+{
 
-int n;
-cin>>n;
-solve(n);
- 
-return 0;
+    int n;
+    cin >> n;
+    solve(n);
+
+    return 0;
 }
