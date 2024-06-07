@@ -17,8 +17,9 @@ int main(){
     // cout<<h.a<<endl;
     // cout<<h.b<<endl;
 
-    cout<<h.c<<endl;
-    cout<<h.d<<endl;
+    // not accessible because of private
+    // cout<<h.c<<endl;
+    // cout<<h.d<<endl;
 
  
 return 0;
