@@ -4,6 +4,7 @@ using namespace std;
 class Hero{
     public:
         int a=10;
+        int c=20;
         int b;
     
     // default or unparameterized constructor
@@ -24,16 +25,27 @@ class Hero{
         cout<<"I'm a parameterized constructor"<<endl;
     }
 
-};
+    //copy constructor
+    Hero(Hero &temp) {
+        this->a = temp.a;
+        this->b = temp.b;
+        this->c = temp.c;
+    }
+
+}; 
  
 int main(){
 
     Hero h;
 
     Hero h1(20);
-    cout<<h1.b<<endl;
+   // cout<<h1.b<<endl;
 
     //cout<<h.b<<endl;
+    Hero h2(h1);
+    cout<<h2.a<<endl;
+    cout<<h2.b<<endl;
+    cout<<h2.c<<endl;
  
 return 0;
 }
