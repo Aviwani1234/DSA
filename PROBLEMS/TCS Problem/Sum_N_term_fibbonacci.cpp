@@ -17,6 +17,7 @@ int main(){
         cout<<1<<endl;
     }
     else {
+        int result=1;
         temp.push_back(0);
         temp.push_back(1);
         n=n-2;
@@ -24,6 +25,7 @@ int main(){
             sum = a+b;
             a=b;
             b=sum;
+            result += sum;
             temp.push_back(sum);
         }
         
@@ -31,7 +33,8 @@ int main(){
             //cout<<temp[i]<<" ";
             res += temp[i];
         }
-        cout<<res<<endl;
+       // cout<<res<<endl;
+        cout<<result<<endl;
     }
 
 
